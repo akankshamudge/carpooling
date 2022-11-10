@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>CodePen - Responsive Registration Form</title>
+  <title>RideX E-KYC Registration Form</title>
   <link rel="stylesheet" href="./style.css">
+
+  <link href="../../img/icon.png" rel="icon">
+
 
 </head>
 <body>
@@ -16,7 +19,7 @@
     </div>
     <div class="row clearfix">
       <div class="">
-        <form>
+        <form method="post" action="../../index.html">
           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-id-card-o"></i></span>
             <input type="number" name="aadhaar" placeholder="Aadhaar No." required />
           </div>
@@ -62,8 +65,10 @@
             	<input type="checkbox" id="cb2">
     			<label for="cb2">I want to receive the newsletter</label>
             </div>
-          <input class="button" type="submit" value="Register" />
+          <input class="button" onclick="clicked();" type="submit" value="Register" />
           <input class="button" type="button" value="Go back!" onclick="history.back()">
+          <p>Already have an account?</p>
+          <input class="button" type="button" value="Login" id="mainBtn">
         </form>
       </div>
     </div>
@@ -72,5 +77,17 @@
 <p class="credit">Developed by <a href="" target="_blank">RideX Services</a></p>
 <!-- partial -->
   <script src='https://use.fontawesome.com/4ecc3dbb0b.js'></script>
+  <script type="text/javascript">
+    function clicked() {
+        alert('You have Successfully Registered !!!');
+    }
+  </script>
+  <script>
+    document.getElementById("mainBtn").addEventListener("click", redirectFunction);
+
+    function redirectFunction(){
+      window.location.href = "../../login/dist/index.html";
+    }
+  </script>
 </body>
 </html>
