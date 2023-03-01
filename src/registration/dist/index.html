@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>RideX E-KYC Registration Form</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <link href="../../img/icon.png" rel="icon">
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+      <h2>E-KYC Registration Form</h2>
+    </div>
+    <div class="row clearfix">
+      <div class="">
+        <form method="post" action="">
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-id-card-o"></i></span>
+            <input type="number" name="aadhaar" placeholder="Aadhaar No." required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email" name="email" id="email" placeholder="Email" required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" name="password" id="password" placeholder="Password" required />
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password" name="password" id="password" placeholder="Re-type Password" required />
+          </div>
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="name" placeholder="First Name" />
+              </div>
+            </div>
+            <div class="col_half">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="name" placeholder="Last Name" required />
+              </div>
+            </div>
+          </div>
+            	<div class="input_field radio_option">
+              <input type="radio" name="radiogroup1" id="rd1">
+              <label for="rd1">Male</label>
+              <input type="radio" name="radiogroup1" id="rd2">
+              <label for="rd2">Female</label>
+              </div>
+              <div class="input_field select_option">
+                <select>
+                  <option>Select a country</option>
+                  <option>India</option>
+                </select>
+                <div class="select_arrow"></div>
+              </div>
+            <div class="input_field checkbox_option">
+            	<input type="checkbox" id="cb1">
+    			<label for="cb1">I agree with terms and conditions</label>
+            </div>
+            <div class="input_field checkbox_option">
+            	<input type="checkbox" id="cb2">
+    			<label for="cb2">I want to receive the newsletter</label>
+            </div>
+          <a href="./sign.html"><input class="button" type="button" value="Register" /></a>
+          <input class="button" type="button" value="Go back!" onclick="history.back()">
+          <p>Already have an account?</p>
+          <input class="button" type="button" value="Login" id="mainBtn">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="credit">Developed by <a href="" target="_blank">RideX Services</a></p>
+<!-- partial -->
+  <script src='https://use.fontawesome.com/4ecc3dbb0b.js'></script>
+  <!-- <script type="text/javascript">
+    function clicked() {
+        alert('You have Successfully Registered !!!');
+    }
+  </script> -->
+  <script>
+    document.getElementById("mainBtn").addEventListener("click", redirectFunction);
+
+    function redirectFunction(){
+      window.location.href = "../../login/dist/index.html";
+    }
+  </script>
+</body>
+</html>
