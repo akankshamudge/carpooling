@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0c52a1;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
 }
 
 .profile-card{
